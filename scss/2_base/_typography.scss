@@ -13,6 +13,20 @@
     font-style: normal;
 }
 
+.heading-1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    backface-visibility: hidden;
+    background-image: linear-gradient(to right, $color-green, $color-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.paragraph {
+    line-height: 1.5;
+}
+
 .link {
     position: relative;
     text-decoration: none;

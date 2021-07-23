@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0.25rem 0.5rem $color-shadow;
     @include responsive($screen-mobile-m) {
         padding: 1rem 1.5rem;
     }
@@ -30,8 +31,9 @@
     }
     &__navigation {
         position: absolute;
+        z-index: 5;
         width: calc(100% - 2rem);
-        top: 100%;
+        top: calc(100% + 1rem);
         left: 1rem;
         display: flex;
         flex-direction: column;
@@ -53,6 +55,7 @@
             left: 2.25rem;
         }
         @include responsive($screen-tablet-l) {
+            background-color: transparent;
             position: relative;
             top: initial;
             left: initial;
@@ -96,6 +99,9 @@
     &__button {
         align-self: center;
         margin: 1rem 0;
+        @include responsive($screen-tablet-l) {
+            margin: 0;
+        }
     }
     &__toggle {
         position: relative;
