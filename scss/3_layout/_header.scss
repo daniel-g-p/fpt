@@ -3,6 +3,7 @@
     grid-column: page-start / page-end;
     grid-row: 1 / 2;
     position: relative;
+    z-index: 3;
     padding: 1rem;
     display: flex;
     justify-content: space-between;

@@ -21,6 +21,9 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    @include responsive($screen-tablet-m) {
+        font-size: 4rem;
+    }
 }
 
 .paragraph {
@@ -39,7 +42,7 @@
         left: 50%;
         display: block;
         width: 0;
-        height: 0.1rem;
+        height: 0.15rem;
         background-image: linear-gradient(to right, $color-green, $color-gold);
         transition: width 0.25s ease, left 0.25s ease;
     }

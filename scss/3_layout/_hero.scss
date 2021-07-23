@@ -1,14 +1,26 @@
 @use "../1_abstracts/" as *;
 .hero {
+    position: relative;
+    z-index: 2;
     grid-column: content-start / content-end;
     grid-row: 2 / 3;
     padding: 2rem 0;
+    @include responsive($screen-tablet-m) {
+        grid-column: content-start / column-end 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
     &__heading {
         display: inline-block;
         margin-bottom: 1rem;
     }
     &__description {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
+        @include responsive($screen-tablet-m) {
+            width: 50%;
+        }
     }
     &__button {}
     &__video {}
