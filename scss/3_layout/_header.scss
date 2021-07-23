@@ -7,12 +7,25 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include responsive($screen-mobile-m) {
+        padding: 1rem 1.5rem;
+    }
+    @include responsive($screen-tablet-s) {
+        padding: 1rem 2.25rem;
+    }
+    @include responsive($screen-tablet-l) {
+        padding: 1rem 7.5%;
+    }
+    @include responsive($screen-desktop-m) {
+        padding: 1rem 10%;
+    }
     &__logo {
         height: 2.5rem;
         fill: $color-grey-25;
-        transition: transform 0.25s ease;
+        transition: transform 0.25s ease, fill 0.25s ease;
         &:hover {
-            transform: translateY(-0.2rem);
+            transform: translateY(-0.1rem);
+            fill: $color-grey-50;
         }
     }
     &__navigation {
@@ -31,6 +44,26 @@
         opacity: 0;
         transform: translateY(-1rem);
         transition: opacity 0.5s ease, transform 0.5s ease;
+        @include responsive($screen-mobile-m) {
+            width: calc(100% - 3rem);
+            left: 1.5rem;
+        }
+        @include responsive($screen-tablet-s) {
+            width: calc(100% - 4.5rem);
+            left: 2.25rem;
+        }
+        @include responsive($screen-tablet-l) {
+            position: relative;
+            top: initial;
+            left: initial;
+            opacity: 1;
+            pointer-events: all;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            box-shadow: none;
+            transform: translateY(0);
+        }
         &--active {
             pointer-events: all;
             opacity: 1;
@@ -41,19 +74,28 @@
         padding: 0.75em 0;
         background-color: $color-white;
         transition: background-color 0.25s ease;
-        &:not(:last-child) {
-            border-bottom: 0.05rem solid $color-grey-97;
-        }
+        border-bottom: 0.05rem solid $color-grey-97;
         &::after {
             display: none;
         }
         &:hover {
             background-color: $color-grey-97;
         }
+        @include responsive($screen-tablet-l) {
+            padding: 0;
+            border: none;
+            margin-right: 1.5em;
+            &:hover {
+                background-color: $color-white;
+            }
+            &::after {
+                display: block;
+            }
+        }
     }
     &__button {
         align-self: center;
-        margin: 1rem;
+        margin: 1rem 0;
     }
     &__toggle {
         position: relative;
@@ -63,6 +105,9 @@
         color: $color-grey-25;
         transition: color 0.25s ease;
         cursor: pointer;
+        @include responsive($screen-tablet-l) {
+            display: none;
+        }
         &:hover {
             color: $color-grey-50;
         }

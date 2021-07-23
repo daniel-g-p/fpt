@@ -9,9 +9,9 @@
         grid-template-columns: [page-start] 2.25rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 2.25rem [page-end];
     }
     @include responsive($screen-tablet-l) {
-        grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
+        grid-template-columns: [page-start] 7.5% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 7.5% [page-end];
     }
-    @include responsive($screen-tablet-l) {
-        grid-template-columns: [page-start] 12.5% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 12.5% [page-end];
+    @include responsive($screen-desktop-m) {
+        grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
     }
 }

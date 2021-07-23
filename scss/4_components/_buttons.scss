@@ -32,12 +32,16 @@
             height: 100%;
             top: 0;
             left: 0;
+            transition: box-shadow 0.25s ease;
         }
         &:hover {
             color: $color-white;
-            transform: translateY(-0.2em);
+            transform: translateY(-0.1em);
             &::before {
                 background-color: transparent;
+            }
+            &::after {
+                box-shadow: 0 0.75em 1em -0.5em $color-shadow;
             }
         }
     }
