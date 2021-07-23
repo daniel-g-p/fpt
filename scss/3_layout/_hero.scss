@@ -4,7 +4,7 @@
     z-index: 2;
     grid-column: content-start / content-end;
     grid-row: 2 / 3;
-    padding: 2rem 0;
+    padding: 3rem 0;
     @include responsive($screen-tablet-m) {
         grid-column: content-start / column-end 9;
         display: flex;
@@ -22,6 +22,4 @@
             width: 50%;
         }
     }
-    &__button {}
-    &__video {}
 }
