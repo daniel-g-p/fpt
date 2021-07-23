@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/poppins_bold.woff2") format("woff2"), url("./fonts/poppins_bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/poppins_regular.woff2") format("woff2"), url("./fonts/poppins_regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font: 400 125%/1 "Poppins", sans-serif;
+  color: #404040;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Njc3MvMl9iYXNlL190eXBvZ3JhcGh5LnNjc3MiLCJzdHlsZS5jb21wLmNzcyIsIi4uL3Njc3MvMl9iYXNlL19yZXNldC5zY3NzIiwiLi4vc2Nzcy8xX2Fic3RyYWN0cy9fdmFyaWFibGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxzQkFBQTtFQUNBLHVHQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtBQ0NKO0FERUE7RUFDSSxzQkFBQTtFQUNBLDZHQUFBO0VBQ0EsbUJBQUE7RUFDQSxrQkFBQTtBQ0FKO0FDVkE7OztFQUdJLFNBQUE7RUFDQSxVQUFBO0VBQ0EsbUJBQUE7QURZSjs7QUNUQTtFQUNJLHNDQUFBO0VBQ0EsY0NOWTtBRmtCaEI7O0FDVEE7RUFDSSxzQkFBQTtBRFlKIiwiZmlsZSI6InN0eWxlLnByZWZpeC5jc3MifQ== */
