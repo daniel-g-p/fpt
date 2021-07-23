@@ -25,6 +25,11 @@
   }
 }
 
+.heading-2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
 .paragraph {
   line-height: 1.5;
 }
@@ -359,6 +364,7 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
+  cursor: pointer;
 }
 .video__modal--active {
   opacity: 1;
@@ -378,6 +384,65 @@ body {
   height: 100%;
   transform: scale(0.95);
   transition: transform 0.5s ease;
+}
+
+.intro {
+  grid-column: page-start/page-end;
+  padding: 3rem 1rem;
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 440px) {
+  .intro {
+    padding: 3rem 1.5rem;
+  }
+}
+@media (min-width: 680px) {
+  .intro {
+    padding: 3rem 2.25rem;
+  }
+}
+@media (min-width: 920px) {
+  .intro {
+    padding: 4.5rem 7.5%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1160px) {
+  .intro {
+    padding: 6rem 10%;
+  }
+}
+.intro__mask {
+  display: block;
+  flex-shrink: 0;
+  width: calc(100vw - 4.5rem);
+  height: calc(100vw - 4.5rem);
+  max-width: 20rem;
+  max-height: 20rem;
+  background-image: url("../img/fitness-background.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: url("../img/logo.svg");
+  mask-image: url("../img/logo.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+@media (min-width: 920px) {
+  .intro__mask {
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+.intro__heading {
+  margin-bottom: 0.5rem;
 }
 
 .button--color {
