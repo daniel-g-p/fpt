@@ -1,0 +1,17 @@
+@use "../1_abstracts/" as *;
+.container {
+    display: grid;
+    grid-template-columns: [page-start] 1rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 1rem [page-end];
+    @include responsive($screen-mobile-m) {
+        grid-template-columns: [page-start] 1.5rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 1.5rem [page-end];
+    }
+    @include responsive($screen-tablet-s) {
+        grid-template-columns: [page-start] 2.25rem [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 2.25rem [page-end];
+    }
+    @include responsive($screen-tablet-l) {
+        grid-template-columns: [page-start] 10% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 10% [page-end];
+    }
+    @include responsive($screen-tablet-l) {
+        grid-template-columns: [page-start] 12.5% [content-start] repeat(12, [column-start] 1fr [column-end]) [content-end] 12.5% [page-end];
+    }
+}

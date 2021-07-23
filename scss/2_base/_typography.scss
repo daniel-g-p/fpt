@@ -1,3 +1,4 @@
+@use "../1_abstracts/" as *;
 @font-face {
     font-family: 'Poppins';
     src: url('./fonts/poppins_bold.woff2') format('woff2'), url('./fonts/poppins_bold.woff') format('woff');
@@ -10,4 +11,26 @@
     src: url('./fonts/poppins_regular.woff2') format('woff2'), url('./fonts/poppins_regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: currentColor;
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 0.25rem);
+        left: 50%;
+        display: block;
+        width: 0;
+        height: 0.1rem;
+        background-image: linear-gradient(to right, $color-green, $color-gold);
+        transition: width 0.25s ease, left 0.25s ease;
+    }
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
 }
