@@ -54,4 +54,14 @@
             box-shadow: 0 0.75em 1em -0.5em $color-shadow;
         }
     }
+    &--grey {
+        color: $color-grey-25;
+        border: 0.2em solid $color-grey-25;
+        &:hover {
+            color: $color-white;
+            background-color: $color-grey-25;
+            transform: translateY(-0.1em);
+            box-shadow: 0 0.75em 1em -0.5em $color-shadow;
+        }
+    }
 }

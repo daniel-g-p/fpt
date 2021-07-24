@@ -695,10 +695,6 @@ body {
   }
 }
 .results__content {
-<<<<<<< HEAD
-  width: 100%;
-=======
->>>>>>> 9f0853812a201ab1da47b0ea12eeb6cf899faee2
   display: flex;
   flex-direction: column;
   margin: 4.5rem 0 2.25rem;
@@ -707,11 +703,7 @@ body {
   .results__content {
     flex-direction: row;
     justify-content: space-between;
-<<<<<<< HEAD
     margin: 6rem 0 3rem;
-=======
-    margin: 6rem 3rem 3rem;
->>>>>>> 9f0853812a201ab1da47b0ea12eeb6cf899faee2
   }
 }
 .results__box {
@@ -750,6 +742,73 @@ body {
 }
 .results__text:not(:last-child) {
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.get-started {
+  grid-column: content-start/content-end;
+  text-align: center;
+  padding: 3rem 0;
+}
+@media (min-width: 920px) {
+  .get-started {
+    padding: 4.5rem 0;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1160px) {
+  .get-started {
+    padding: 6rem 0;
+  }
+}
+.get-started__heading {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 920px) {
+  .get-started__heading {
+    margin-bottom: 2.25rem;
+  }
+}
+.get-started__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 680px) {
+  .get-started__content {
+    flex-direction: row;
+  }
+}
+.get-started__block {
+  flex-grow: 1;
+}
+.get-started__subheading {
+  margin-bottom: 0.75rem;
+}
+.get-started__subheading--1 {
+  color: #4AC752;
+}
+.get-started__subheading--2 {
+  color: #FCC201;
+}
+.get-started__text {
+  margin-bottom: 1rem;
+}
+.get-started__separator {
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  background-image: linear-gradient(to right, #4AC752, #FCC201);
+  margin: 15vw 0;
+  transform: rotate(10deg);
+}
+@media (min-width: 680px) {
+  .get-started__separator {
+    width: 0.4rem;
+    height: 16rem;
+    background-image: linear-gradient(to top, #4AC752, #FCC201);
+    margin: 0 3rem;
+  }
 }
 
 .button {
@@ -804,6 +863,16 @@ body {
 .button--white:hover {
   color: #404040;
   background-color: #FFFFFF;
+  transform: translateY(-0.1em);
+  box-shadow: 0 0.75em 1em -0.5em #00000025;
+}
+.button--grey {
+  color: #404040;
+  border: 0.2em solid #404040;
+}
+.button--grey:hover {
+  color: #FFFFFF;
+  background-color: #404040;
   transform: translateY(-0.1em);
   box-shadow: 0 0.75em 1em -0.5em #00000025;
 }
