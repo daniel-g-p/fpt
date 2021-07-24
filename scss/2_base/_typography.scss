@@ -29,6 +29,18 @@
 .heading-2 {
     font-size: 1.5rem;
     line-height: 1.25;
+    @include responsive($screen-tablet-m) {
+        font-size: 2rem;
+    }
+}
+
+.heading-3 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.heading-4 {
+    line-height: 1.25;
 }
 
 .paragraph {
