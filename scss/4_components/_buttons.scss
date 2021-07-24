@@ -1,14 +1,14 @@
 @use "../1_abstracts/" as *;
 .button {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
     &--color {
-        position: relative;
-        z-index: 2;
-        text-transform: uppercase;
-        text-decoration: none;
-        display: inline-block;
-        padding: 0.75em 1.5em;
         color: $color-grey-25;
-        transition: color 0.25s ease, transform 0.25s ease;
         &::before,
         &::after {
             content: "";
@@ -43,6 +43,15 @@
             &::after {
                 box-shadow: 0 0.75em 1em -0.5em $color-shadow;
             }
+        }
+    }
+    &--white {
+        border: 0.2em solid $color-white;
+        &:hover {
+            color: $color-grey-25;
+            background-color: $color-white;
+            transform: translateY(-0.1em);
+            box-shadow: 0 0.75em 1em -0.5em $color-shadow;
         }
     }
 }

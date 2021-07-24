@@ -477,6 +477,11 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 920px) {
+  .concept__heading {
+    margin-bottom: 2.25rem;
+  }
+}
 .concept__content {
   display: grid;
   gap: 1.5rem;
@@ -653,15 +658,104 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.button--color {
+.results {
+  grid-column: page-start/page-end;
+  background-image: linear-gradient(to bottom right, #4AC752, #FCC201);
+  text-align: center;
+  color: #FFFFFF;
+  padding: 3rem 1rem;
+}
+@media (min-width: 440px) {
+  .results {
+    padding: 3rem 1.5rem;
+  }
+}
+@media (min-width: 680px) {
+  .results {
+    padding: 3rem 2.25rem;
+  }
+}
+@media (min-width: 920px) {
+  .results {
+    padding: 4.5rem 7.5%;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1160px) {
+  .results {
+    padding: 6rem 10%;
+  }
+}
+.results__heading {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 920px) {
+  .results__heading {
+    margin-bottom: 2.25rem;
+  }
+}
+.results__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 4.5rem 0 2.25rem;
+}
+@media (min-width: 800px) {
+  .results__content {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 6rem 0 3rem;
+  }
+}
+.results__box {
+  cursor: default;
+  flex-grow: 1;
   position: relative;
-  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 4.5rem 1.5rem 1.5rem;
+  box-shadow: 0 0.5rem 1rem #00000025;
+  transition: transform 0.25s ease;
+}
+.results__box:not(:last-child) {
+  margin-bottom: 4.5rem;
+}
+@media (min-width: 800px) {
+  .results__box:not(:last-child) {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+}
+.results__box:hover {
+  transform: translateY(-0.5rem);
+}
+.results__photo {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -3rem;
+  transform: translateX(-50%);
+  width: 6rem;
+  border-radius: 50%;
+}
+.results__text {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+.results__text:not(:last-child) {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.button {
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   padding: 0.75em 1.5em;
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.button--color {
   color: #404040;
-  transition: color 0.25s ease, transform 0.25s ease;
 }
 .button--color::before, .button--color::after {
   content: "";
@@ -695,6 +789,15 @@ body {
   background-color: transparent;
 }
 .button--color:hover::after {
+  box-shadow: 0 0.75em 1em -0.5em #00000025;
+}
+.button--white {
+  border: 0.2em solid #FFFFFF;
+}
+.button--white:hover {
+  color: #404040;
+  background-color: #FFFFFF;
+  transform: translateY(-0.1em);
   box-shadow: 0 0.75em 1em -0.5em #00000025;
 }
 
