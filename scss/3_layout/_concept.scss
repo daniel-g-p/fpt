@@ -11,6 +11,9 @@
     &__heading {
         text-align: center;
         margin-bottom: 1.5rem;
+        @include responsive($screen-tablet-l) {
+            margin-bottom: 2.25rem;
+        }
     }
     &__content {
         display: grid;

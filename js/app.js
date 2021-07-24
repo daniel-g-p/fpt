@@ -50,8 +50,11 @@ dom.hero.playButton.addEventListener("click", function() {
 });
 
 dom.hero.videoModal.addEventListener("click", function() {
-    fn.toggleClass(dom.hero.videoModal, "video__modal--active");
-    setTimeout(() => { fn.resetVideo(dom.hero.video) }, 500);
+    dom.hero.videoModal.classList.toggle("video__modal--active");
+    setTimeout(() => {
+        let src = dom.hero.video.src;
+        dom.hero.video.src = src;
+    }, 500);
 });
 
 dom.concept.arrows.forEach(arrow => arrow.addEventListener("click", function() {
