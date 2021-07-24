@@ -695,7 +695,10 @@ body {
   }
 }
 .results__content {
+<<<<<<< HEAD
   width: 100%;
+=======
+>>>>>>> 9f0853812a201ab1da47b0ea12eeb6cf899faee2
   display: flex;
   flex-direction: column;
   margin: 4.5rem 0 2.25rem;
@@ -704,7 +707,11 @@ body {
   .results__content {
     flex-direction: row;
     justify-content: space-between;
+<<<<<<< HEAD
     margin: 6rem 0 3rem;
+=======
+    margin: 6rem 3rem 3rem;
+>>>>>>> 9f0853812a201ab1da47b0ea12eeb6cf899faee2
   }
 }
 .results__box {
