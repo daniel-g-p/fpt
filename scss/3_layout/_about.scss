@@ -1,0 +1,34 @@
+@use "../1_abstracts/" as *;
+.about {
+    grid-column: content-start / content-end;
+    padding: 3rem 0;
+    @include responsive($screen-tablet-l) {
+        padding: 4.5rem 0;
+        flex-direction: row;
+    }
+    &__heading {
+        margin-bottom: 1.5rem;
+        display: inline-block;
+    }
+    &__description {
+        margin-bottom: 1.5rem;
+    }
+    &__content {
+        @include responsive($screen-tablet-s) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0 1.5rem;
+        }
+    }
+    &__block {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+            @include responsive($screen-tablet-s) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__subheading {
+        margin-bottom: 0.5rem;
+    }
+}
