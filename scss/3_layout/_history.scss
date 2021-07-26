@@ -1,0 +1,117 @@
+@use "../1_abstracts/" as *;
+.history {
+    grid-column: content-start / content-end;
+    position: relative;
+    padding: 3rem 0;
+    margin-bottom: 3rem;
+    @include responsive($screen-tablet-l) {
+        padding: 4.5rem 0;
+        margin-bottom: 4.5rem;
+    }
+    @include responsive($screen-desktop-m) {
+        padding: 6rem 0;
+        margin-bottom: 6rem;
+    }
+    &__heading {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        margin-left: 4.75rem;
+        @include responsive($screen-tablet-l) {
+            margin-bottom: 2.25rem;
+        }
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 4rem 1fr;
+        grid-template-rows: repeat(4, 4rem max-content);
+        gap: 1.5rem 0.75rem;
+        @include responsive($screen-tablet-s) {
+            grid-template-columns: 6rem 1fr;
+            grid-template-rows: repeat(4, 6rem max-content);
+            gap: 3rem 1.5rem;
+        }
+    }
+    &__year {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        color: $color-white;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        background-color: rgba($color-white, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 1 / 2;
+        transform: rotate(90deg);
+        @include responsive($screen-tablet-s) {
+            font-size: 1.25rem;
+            width: 6rem;
+            height: 6rem;
+            transform: none;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0.2rem solid $color-white;
+            transform: scale(1.25);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        &--2018 {
+            grid-row: 1 / span 2;
+        }
+        &--2019 {
+            grid-row: 3 / span 2;
+        }
+        &--2020 {
+            grid-row: 5 / span 2;
+        }
+        &--2021 {
+            grid-row: 7 / span 2;
+        }
+    }
+    &__box {
+        background-color: $color-grey-97;
+        padding: 0.75rem;
+        grid-column: 2 / 3;
+        &--2018 {
+            grid-row: 1 / span 2;
+        }
+        &--2019 {
+            grid-row: 3 / span 2;
+        }
+        &--2020 {
+            grid-row: 5 / span 2;
+        }
+        &--2021 {
+            grid-row: 7 / span 2;
+        }
+    }
+    &__subheading {
+        margin-bottom: 0.25rem;
+    }
+    &__arrow {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 3rem;
+        background-image: linear-gradient(to bottom, $color-green, $color-gold);
+        top: 0;
+        left: 0.5rem;
+        z-index: -1;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.5rem), 50% 100%, 0 calc(100% - 1.5rem));
+        @include responsive($screen-tablet-s) {
+            font-size: 1.25rem;
+            width: 4.5rem;
+            transform: none;
+            left: 0.75rem;
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.25rem), 50% 100%, 0 calc(100% - 2.25rem));
+        }
+    }
+}

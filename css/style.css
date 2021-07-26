@@ -960,7 +960,6 @@ body {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, 5vw);
     gap: 1rem;
-    margin-bottom: 4.5rem;
   }
 }
 .gallery img {
@@ -1097,6 +1096,135 @@ body {
   .gallery__photo--13 {
     grid-column: 8/9;
     grid-row: 6/7;
+  }
+}
+
+.history {
+  grid-column: content-start/content-end;
+  position: relative;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+@media (min-width: 920px) {
+  .history {
+    padding: 4.5rem 0;
+    margin-bottom: 4.5rem;
+  }
+}
+@media (min-width: 1160px) {
+  .history {
+    padding: 6rem 0;
+    margin-bottom: 6rem;
+  }
+}
+.history__heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-left: 4.75rem;
+}
+@media (min-width: 920px) {
+  .history__heading {
+    margin-bottom: 2.25rem;
+  }
+}
+.history__content {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: repeat(4, 4rem max-content);
+  gap: 1.5rem 0.75rem;
+}
+@media (min-width: 680px) {
+  .history__content {
+    grid-template-columns: 6rem 1fr;
+    grid-template-rows: repeat(4, 6rem max-content);
+    gap: 3rem 1.5rem;
+  }
+}
+.history__year {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/2;
+  transform: rotate(90deg);
+}
+@media (min-width: 680px) {
+  .history__year {
+    font-size: 1.25rem;
+    width: 6rem;
+    height: 6rem;
+    transform: none;
+  }
+}
+.history__year::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid #FFFFFF;
+  transform: scale(1.25);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.history__year--2018 {
+  grid-row: 1/span 2;
+}
+.history__year--2019 {
+  grid-row: 3/span 2;
+}
+.history__year--2020 {
+  grid-row: 5/span 2;
+}
+.history__year--2021 {
+  grid-row: 7/span 2;
+}
+.history__box {
+  background-color: #F7F7F7;
+  padding: 0.75rem;
+  grid-column: 2/3;
+}
+.history__box--2018 {
+  grid-row: 1/span 2;
+}
+.history__box--2019 {
+  grid-row: 3/span 2;
+}
+.history__box--2020 {
+  grid-row: 5/span 2;
+}
+.history__box--2021 {
+  grid-row: 7/span 2;
+}
+.history__subheading {
+  margin-bottom: 0.25rem;
+}
+.history__arrow {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 3rem;
+  background-image: linear-gradient(to bottom, #4AC752, #FCC201);
+  top: 0;
+  left: 0.5rem;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.5rem), 50% 100%, 0 calc(100% - 1.5rem));
+}
+@media (min-width: 680px) {
+  .history__arrow {
+    font-size: 1.25rem;
+    width: 4.5rem;
+    transform: none;
+    left: 0.75rem;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.25rem), 50% 100%, 0 calc(100% - 2.25rem));
   }
 }
 
